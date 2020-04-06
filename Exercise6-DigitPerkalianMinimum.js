@@ -1,7 +1,7 @@
 //Exercise 6 Digit Perkalian Minimum
 function digitPerkalianMinimum(angka) {
     var faktor = [];
-    for (let i = 0; i <= angka / 2; i++) { //isi faktor
+    for (let i = 0; i <= angka; i++) { //isi faktor
         if (angka % i === 0) {
             faktor.push([i, angka / i]);
         }
@@ -18,6 +18,7 @@ function digitPerkalianMinimum(angka) {
             newFaktor.push(faktor[i]);
         }
     }
+    // cari faktor minimum
     var min = 100;
     for (let i = 0; i < newFaktor.length; i++) {
         var temp = 0;
@@ -25,16 +26,16 @@ function digitPerkalianMinimum(angka) {
             var str = newFaktor[i][j].toString();
             temp += str.length;
         }
-        if(temp < min){
+        if (temp < min) {
             min = temp;
         }
     }
     return min;
 }
 
-    // TEST CASES
-    console.log(digitPerkalianMinimum(24)); // 2
-    console.log(digitPerkalianMinimum(90)); // 3
-    console.log(digitPerkalianMinimum(20)); // 2
-    console.log(digitPerkalianMinimum(179)); // 4
-    //console.log(digitPerkalianMinimum(1)); // 2
+// TEST CASES
+console.log(digitPerkalianMinimum(24)); // 2
+console.log(digitPerkalianMinimum(90)); // 3
+console.log(digitPerkalianMinimum(20)); // 2
+console.log(digitPerkalianMinimum(179)); // 4
+console.log(digitPerkalianMinimum(1)); // 2

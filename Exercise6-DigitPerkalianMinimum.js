@@ -19,11 +19,13 @@ function digitPerkalianMinimum(angka) {
         }
     }
     // cari faktor minimum
-    var min = 100;
-    for (let i = 0; i < newFaktor.length; i++) {
+    var str = newFaktor[0][0].toString();
+    var str2 =newFaktor[0][1].toString();
+    var min = str.length + str2.length;
+    for (let i = 1; i < newFaktor.length; i++) {
         var temp = 0;
         for (let j = 0; j < newFaktor[i].length; j++) {
-            var str = newFaktor[i][j].toString();
+            str = newFaktor[i][j].toString();
             temp += str.length;
         }
         if (temp < min) {

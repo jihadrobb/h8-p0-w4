@@ -23,9 +23,7 @@ function countProfit(shoppers) {
         var buyers = []; //array baru untuk output
         for (let i = 0; i < listBarang.length; i++) {
             var product = listBarang[i][0];
-            buyers.push({
-                product
-            });
+            buyers.push({product});
             //masukin shoppers dari listBarang
             if (listBarang[i].length > 3) {
                 var newArr = [];

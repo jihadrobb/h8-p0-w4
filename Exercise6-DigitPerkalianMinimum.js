@@ -1,6 +1,6 @@
 //Exercise 6 Digit Perkalian Minimum
 function digitPerkalianMinimum(angka) {
-    if (angka === 0) {
+    if (angka <= 0) {
         return 0;
     } else {
         var faktor = [];

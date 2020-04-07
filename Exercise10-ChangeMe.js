@@ -1,3 +1,4 @@
+//Exercise 10 Change Me
 function changeMe(arr) {
     for (let i = 0; i < arr.length; i++) {
         var person = {};

@@ -18,9 +18,9 @@ function highestScore(students) {
     for (let i = 0; i < kelas.length; i++) {
         var max = {name: '', score: 0}
         for (let j = 0; j < students.length; j++) {
-            if(kelas[i] === students[j].class && max.score < students[i].score){
-                max.score = students[i].score;
-                max.name = students[i].name;
+            if(kelas[i] === students[j].class && max.score < students[j].score){
+                max.score = students[j].score;
+                max.name = students[j].name;
             }
         }
         highest[kelas[i]] = max;
